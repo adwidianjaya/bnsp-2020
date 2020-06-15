@@ -1,7 +1,6 @@
-import Queue from "queue";
-import { default as mongodb } from "mongodb";
-let MongoClient = mongodb.MongoClient;
-import { v4 as uuidV4 } from "uuid";
+const Queue = require("queue");
+const { MongoClient } = require("mongodb");
+const { v4: uuidV4 } = require("uuid");
 
 let q = Queue();
 

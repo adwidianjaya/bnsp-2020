@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "src/kompetensi-01/index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "docs:generate": "typedoc --out docs src",
     "docs:serve": "serve docs",
@@ -12,7 +11,8 @@
     "kompetensi-03": "tsc src/kompetensi-03/index.ts --outDir build/kompetensi-03 --lib es6,dom,es5 --downlevelIteration --target es5 && node build/kompetensi-03/index.js",
     "kompetensi-04": "tsc src/kompetensi-04/index.ts --outDir build/kompetensi-04 --lib es6,dom,es5 --downlevelIteration --target es5 --esModuleInterop --moduleResolution node && node build/kompetensi-04/index.js",
     "kompetensi-05": "node --experimental-modules src/kompetensi-05/index.js",
-    "kompetensi-06": "npm run docs:generate && npm run docs:serve"
+    "kompetensi-06": "npm run docs:generate && npm run docs:serve",
+    "kompetensi-07": "node --experimental-modules src/kompetensi-05/index.js"
   },
   "dependencies": {
     "mongod": "^2.0.0",
