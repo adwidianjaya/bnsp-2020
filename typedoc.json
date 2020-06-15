@@ -1,0 +1,10 @@
+{
+  "excludeExternals": false,
+  "excludeNotExported": false,
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "inputFiles": "src",
+  "out": "docs",
+  "exclude": "**/*+(index|.spec|.e2e).ts",
+  "readme": "src/README.md"
+}
