@@ -15,8 +15,7 @@
     "kompetensi-07": "node --experimental-modules src/kompetensi-05/index.js"
   },
   "dependencies": {
-    "mongod": "^2.0.0",
-    "mongodb": "^3.5.9",
+    "mongodb": "3.4.0",
     "queue": "^6.0.1",
     "queue-fifo": "^0.2.6",
     "uuid": "^8.1.0"
