@@ -59,9 +59,9 @@ class CheckingAccount {
 
 class BusinessCheckingAccount extends CheckingAccount {
   open(initialAmount: number) {
-    if (initialAmount < 1000) {
+    if (initialAmount < 10 * 1000 * 1000) {
       throw new Error(
-        "Business accounts must have an initial deposit of 1.000 Euros"
+        "Business accounts must have an initial deposit of IDR 10.000.000"
       );
     }
     super.open(initialAmount);
@@ -72,7 +72,7 @@ class PersonalCheckingAccount extends CheckingAccount {
   open(initialAmount: number) {
     if (initialAmount <= 0) {
       throw new Error(
-        "Personal accounts must have an initial deposit of more than zero Euros"
+        "Personal accounts must have an initial deposit of more than IDR 0"
       );
     }
     super.open(initialAmount);
@@ -82,7 +82,7 @@ class PersonalCheckingAccount extends CheckingAccount {
 console.log("\nOpening business account...");
 try {
   const businessAccount = new BusinessCheckingAccount();
-  businessAccount.open(100);
+  businessAccount.open(1000 * 1000);
   console.log("Success!");
 } catch (err) {
   console.warn("Error:", err.message);
@@ -91,7 +91,7 @@ try {
 console.log("Opening personal account...");
 try {
   const personalAccount = new PersonalCheckingAccount();
-  personalAccount.open(100);
+  personalAccount.open(1000 * 1000);
   console.log("Success!");
 } catch (err) {
   console.warn("Error:", err.message);
